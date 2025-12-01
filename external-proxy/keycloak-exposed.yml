@@ -4,5 +4,7 @@ services:
   keycloak:
     ports:
       # expose the keycloak server on all interfaces
-      - "0.0.0.0:9000:9000"
-      - "0.0.0.0:8080:8080"
+      - "0.0.0.0:${KEYCLOAK_FIRST_HOST_PORT:-9000}:9000"
+      - "0.0.0.0:${KEYCLOAK_HTTP_HOST_PORT:-8080}:8080"
+
+

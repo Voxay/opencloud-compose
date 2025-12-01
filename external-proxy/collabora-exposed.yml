@@ -4,8 +4,11 @@ services:
   collaboration:
     ports:
       # expose the wopi server on all interfaces
-      - "0.0.0.0:9300:9300"
+      - "0.0.0.0:${WOPISERVER_HOST_PORT:-9300}:9300"
   collabora:
     ports:
       # expose the collabora server on all interfaces
-      - "0.0.0.0:9980:9980"
+      - "0.0.0.0:${COLLABORA_HOST_PORT:-9980}:9980"
+
+
+

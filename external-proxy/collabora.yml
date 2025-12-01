@@ -3,8 +3,10 @@ services:
   collaboration:
     ports:
       # expose the wopi server on localhost
-      - "127.0.0.1:9300:9300"
+      - "127.0.0.1:${WOPISERVER_HOST_PORT:-9300}:9300"
   collabora:
     ports:
       # expose the collabora server on localhost
-      - "127.0.0.1:9980:9980"
+      - "127.0.0.1:${COLLABORA_HOST_PORT:-9980}:9980"
+
+
